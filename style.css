@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; }
+button, input, select { font: inherit; }
+.app { min-height: 100vh; padding: 16px; }
+.container { max-width: 1080px; margin: 0 auto; display: grid; gap: 16px; }
+.hero, .card, .summary { background: white; border-radius: 24px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+.hero { padding: 22px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; }
+.sub { margin: 0; color: #64748b; font-weight: 700; font-size: 13px; }
+h1 { margin: 4px 0 0; font-size: 30px; letter-spacing: -0.04em; }
+.desc { margin: 8px 0 0; color: #475569; font-size: 14px; line-height: 1.6; }
+.topActions { display: flex; gap: 8px; flex-wrap: wrap; }
+.utility { border: 1px solid #e2e8f0; background: #fff; border-radius: 14px; padding: 10px 12px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; cursor: pointer; }
+.fileLabel input { display: none; }
+.summaryGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.summary { padding: 16px; }
+.summaryTop { display: flex; align-items: center; justify-content: space-between; }
+.summaryTop p { margin: 0; font-size: 28px; font-weight: 800; }
+.icon { background: #f1f5f9; border-radius: 14px; padding: 10px; display: grid; place-items: center; color: #334155; }
+.summary span { display: block; margin-top: 10px; color: #475569; font-weight: 700; font-size: 14px; }
+.card { padding: 20px; }
+h2 { margin: 0 0 14px; font-size: 20px; }
+.formGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+input, select { border: 1px solid #e2e8f0; border-radius: 14px; padding: 12px 14px; outline: none; background: white; min-width: 0; }
+input:focus, select:focus { border-color: #111827; }
+.check { border: 1px solid #e2e8f0; border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 8px; }
+.primary { margin-top: 14px; border: 0; background: #111827; color: white; border-radius: 16px; padding: 12px 18px; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; cursor: pointer; }
+.listHeader { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 12px; }
+.listHeader h2 { margin: 0; }
+.controls { display: flex; gap: 8px; }
+.search { display: flex; align-items: center; gap: 8px; border: 1px solid #e2e8f0; border-radius: 14px; padding: 0 10px; background: white; }
+.search input { border: 0; padding: 11px 4px; }
+.items { display: grid; gap: 10px; }
+.item { background: #f8fafc; border: 1px solid #eef2f7; border-radius: 22px; padding: 14px; display: grid; grid-template-columns: 1fr 220px auto; gap: 12px; align-items: center; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.badge { border-radius: 999px; padding: 5px 10px; font-size: 12px; font-weight: 800; }
+.badge.green { background: #dcfce7; color: #15803d; }
+.badge.gray { background: #e5e7eb; color: #4b5563; }
+.badge.blue { background: #dbeafe; color: #1d4ed8; }
+.badge.red { background: #fee2e2; color: #b91c1c; }
+.badge.orange { background: #ffedd5; color: #c2410c; }
+.badge.zinc { background: #f4f4f5; color: #52525b; }
+.appliedBtn { border: 0; background: transparent; display: inline-flex; gap: 5px; align-items: center; color: #475569; font-weight: 700; cursor: pointer; }
+h3 { margin: 8px 0 2px; font-size: 17px; }
+.itemMain p { margin: 0; color: #64748b; font-size: 14px; }
+.itemMain .memo { margin-top: 4px; color: #475569; }
+.editBox { display: grid; gap: 7px; }
+.editBox label { font-size: 12px; color: #64748b; font-weight: 800; }
+.delete { border: 1px solid #e2e8f0; background: white; border-radius: 15px; padding: 12px; color: #64748b; cursor: pointer; }
+.delete:hover { color: #dc2626; }
+.empty { border: 1px dashed #cbd5e1; border-radius: 18px; padding: 28px; text-align: center; color: #64748b; }
+.reset { margin-top: 14px; border: 0; background: transparent; color: #64748b; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 700; }
+@media (max-width: 760px) {
+  .app { padding: 10px; }
+  .hero { display: grid; align-items: start; }
+  .summaryGrid { grid-template-columns: repeat(2, 1fr); }
+  .formGrid { grid-template-columns: 1fr; }
+  .listHeader, .controls { display: grid; width: 100%; }
+  .item { grid-template-columns: 1fr; }
+  .editBox { grid-template-columns: 1fr 1fr; }
+  .editBox label { grid-column: 1 / -1; }
+  .delete { justify-self: start; }
+}
